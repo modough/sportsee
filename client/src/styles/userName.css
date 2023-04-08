@@ -1,0 +1,21 @@
+.informations {
+	margin-bottom: 77px;
+}
+.userInfos {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	height: 100px;
+}
+.userInfos p,
+.name {
+	font-size: 48px;
+	font-weight: 500;
+}
+.name {
+	color: #ff0101;
+}
+.scoring-message {
+	font-size: 18px;
+	font-weight: 400;
+}

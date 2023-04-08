@@ -1,0 +1,15 @@
+.topNavbar {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: black;
+	height: 91px;
+}
+.topNavbar-list {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+}
