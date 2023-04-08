@@ -1,7 +1,12 @@
 .chart {
-	width: 835px;
-	height: 320px;
-	background: #fbfbfb;
+	display: flex;
+	gap: 100px;
+}
+.left-chart {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 
 .chart-topInfos {
@@ -9,6 +14,10 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 20px;
+}
+.chart-topInfosArticle {
+	height: 320px;
+	background: #fbfbfb;
 }
 .chart-topInfos p {
 	font-size: 18px;
@@ -45,4 +54,56 @@
 
 	margin-left: -1em;
 	font-size: 30px;
+}
+
+.chart-bottomInfosArticle {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+}
+.bottomInfosDiv {
+	flex: 1;
+	height: 263px;
+	background-color: blue;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+.bottomInfosDiv p {
+	color: #fff;
+	width: 150px;
+	font-weight: 500;
+}
+.bottomInfosDiv.session-timing {
+	background-color: #ff0000;
+}
+.bottomInfosDiv.intensity {
+	background-color: #000;
+}
+.bottomInfosDiv.score {
+	background-color: #fff;
+	border: 1px solid black;
+}
+.bottomInfosDiv.session-timing p {
+	opacity: 0.5;
+}
+.bottomInfosDiv.intensity p {
+	margin-left: 30%;
+}
+.bottomInfosDiv.score p {
+	color: #000;
+}
+
+.right-chart {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.right-chart > div {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.right-chart > div > span {
+	width: 80px;
 }

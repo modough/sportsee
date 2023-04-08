@@ -6,10 +6,10 @@ import UserPage from './pages/UserPage'
 
 function App() {
     return (
-        <Fragment>
+        <section id='main'>
             <TopNavbar />
             <UserPage />
-        </Fragment>
+        </section>
     )
 }
 

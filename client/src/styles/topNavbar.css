@@ -1,9 +1,12 @@
 .topNavbar {
+	position: absolute;
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;
 	background-color: black;
+	width: 100%;
 	height: 91px;
+	z-index: 100;
 }
 .topNavbar-list {
 	display: flex;
