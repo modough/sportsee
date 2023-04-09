@@ -8,55 +8,7 @@
 	flex-direction: column;
 	gap: 50px;
 }
-
-.chart-topInfos {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 20px;
-}
-.chart-topInfosArticle {
-	height: 320px;
-	background: #fbfbfb;
-}
-.chart-topInfos p {
-	font-size: 18px;
-	font-weight: 500;
-}
-.weightAndCalory {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-}
-.weightAndCalory li {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
-.weightAndCalory li p {
-	font-size: 14px;
-	font-weight: 500;
-	color: #74798c;
-}
-.weightAndCalory .weight::before {
-	content: '\2022';
-	color: black;
-	font-weight: bold;
-	display: inline-block;
-	font-size: 30px;
-	margin-left: -1em;
-}
-.weightAndCalory .calory::before {
-	content: '\2022';
-	color: red;
-	font-weight: bold;
-	display: inline-block;
-
-	margin-left: -1em;
-	font-size: 30px;
-}
-
-.chart-bottomInfosArticle {
+.chart-bottomInfos {
 	display: flex;
 	flex-direction: row;
 	gap: 50px;
@@ -64,7 +16,6 @@
 .bottomInfosDiv {
 	flex: 1;
 	height: 263px;
-	background-color: blue;
 	border-radius: 5px;
 	padding: 10px 20px;
 }
@@ -72,25 +23,6 @@
 	color: #fff;
 	width: 150px;
 	font-weight: 500;
-}
-.bottomInfosDiv.session-timing {
-	background-color: #ff0000;
-}
-.bottomInfosDiv.intensity {
-	background-color: #000;
-}
-.bottomInfosDiv.score {
-	background-color: #fff;
-	border: 1px solid black;
-}
-.bottomInfosDiv.session-timing p {
-	opacity: 0.5;
-}
-.bottomInfosDiv.intensity p {
-	margin-left: 30%;
-}
-.bottomInfosDiv.score p {
-	color: #000;
 }
 
 .right-chart {

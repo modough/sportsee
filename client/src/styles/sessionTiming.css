@@ -1,0 +1,6 @@
+.bottomInfosDiv.session-timing {
+	background-color: #ff0000;
+}
+.bottomInfosDiv.session-timing p {
+	opacity: 0.5;
+}

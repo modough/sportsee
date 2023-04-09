@@ -1,5 +1,5 @@
 .topNavbar {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;

@@ -4,6 +4,11 @@ import Bike from '../assets/bike.svg'
 import Weight from '../assets/weight.svg'
 import Swim from '../assets/swim.svg'
 
+/**
+ * This is a React component that renders a left navigation bar with icons for yoga, swimming, biking,
+ * and weightlifting.
+ * @returns The LeftNavbar component is being returned.
+ */
 function LeftNavbar() {
     return (
         <nav className="leftNavbar">
