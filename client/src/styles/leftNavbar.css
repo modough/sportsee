@@ -1,5 +1,5 @@
 .leftNavbar {
-	position: relative;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	width: 117px;

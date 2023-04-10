@@ -24,18 +24,3 @@
 	width: 150px;
 	font-weight: 500;
 }
-
-.right-chart {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.right-chart > div {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-}
-.right-chart > div > span {
-	width: 80px;
-}

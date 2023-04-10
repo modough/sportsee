@@ -6,7 +6,7 @@ Sports coaching with a dynamic dashboard. Work with backend available at : https
 
 INSTALLING
 Clone this repo with the command
-git clone https://github.com/valent1618/SportSee.git
+git clone https://github.com/modough/sportsee.git
 Clone backend repo with the command
 git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git
 Follow the instruction for the backend

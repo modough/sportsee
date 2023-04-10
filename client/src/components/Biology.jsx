@@ -8,19 +8,31 @@ function Biology() {
         <article className='biology'>
             <div className='calories'>
                 <img src={Calories} alt="" />
-                <span>1,930kCal Calories</span>
+                <span>
+                    <p>1,930kCal</p>
+                    Calories
+                </span>
             </div>
             <div className='proteins'>
                 <img src={Proteins} alt="" />
-                <span>155g Proteins</span>
+                <span>
+                    <p>155g</p>
+                    Proteins
+                </span>
             </div>
             <div className='carbs'>
                 <img src={Carbs} alt="" />
-                <span> 290g Glucides</span>
+                <span>
+                    <p>290g</p>
+                    Glucides
+                </span>
             </div>
             <div className='lipids'>
                 <img src={Fat} alt="" />
-                <span> 50g Lipides</span>
+                <span>
+                    <p>50g</p>
+                    Lipides
+                </span>
             </div>
         </article>
     )

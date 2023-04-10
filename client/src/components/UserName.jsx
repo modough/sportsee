@@ -13,9 +13,9 @@ function UserName() {
                 <p>Bonjour</p>
                 <h1 className='name'>Name</h1>
             </div>
-            <div className='scoring-message'>
+            <p className='scoring-message'>
                 Félicitation ! Vous avez explosé vos objectifs hier 👏
-            </div>
+            </p>
         </section>
     )
 }

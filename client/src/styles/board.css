@@ -1,4 +1,6 @@
 #board {
+	position: absolute;
+	left: 150px;
 	width: 100%;
 	padding: 50px 100px;
 }
