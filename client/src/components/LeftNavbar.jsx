@@ -11,15 +11,15 @@ import Swim from '../assets/swim.svg'
  */
 function LeftNavbar() {
     return (
-        <nav className="leftNavbar">
-            <ul className='leftNavbar-list'>
+        <section className="leftNavbar">
+            <nav className='leftNavbar-list'>
                 <li><img className='yoga' src={Yoga} alt='yoga icon' /></li>
                 <li><img className='swim' src={Swim} alt='natation icon' /></li>
                 <li><img className='bike' src={Bike} alt='vélo icon' /></li>
                 <li><img className='weight' src={Weight} alt='altére icon' /></li>
-            </ul>
-            <p className='copyright'></p>
-        </nav>
+            </nav>
+            <p className='copyright'>Copyright, SportSee 2020</p>
+        </section>
     )
 }
 

@@ -1,6 +1,5 @@
 import Board from "../components/Board"
 import LeftNavbar from '../components/LeftNavbar'
-import '../styles/userPage.css'
 
 
 /**
