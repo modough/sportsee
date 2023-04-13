@@ -3,9 +3,9 @@
 	gap: 100px;
 }
 .left-chart {
-	flex: 4;
 	display: flex;
 	flex-direction: column;
+	flex: 4;
 	gap: 50px;
 }
 .chart-bottomInfos {

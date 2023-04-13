@@ -1,8 +1,9 @@
 import '../styles/leftNavbar.css'
 import Yoga from '../assets/yoga.svg'
-import Bike from '../assets/bike.svg'
-import Weight from '../assets/weight.svg'
-import Swim from '../assets/swim.svg'
+
+
+import { leftNavbarData } from '../utils/leftNavbarData'
+import LeftNavbarBtn from './LeftNavbarBtn'
 
 /**
  * This is a React component that renders a left navigation bar with icons for yoga, swimming, biking,
@@ -10,13 +11,21 @@ import Swim from '../assets/swim.svg'
  * @returns The LeftNavbar component is being returned.
  */
 function LeftNavbar() {
+
     return (
         <section className="leftNavbar">
-            <nav className='leftNavbar-list'>
-                <li><img className='yoga' src={Yoga} alt='yoga icon' /></li>
-                <li><img className='swim' src={Swim} alt='natation icon' /></li>
-                <li><img className='bike' src={Bike} alt='vélo icon' /></li>
-                <li><img className='weight' src={Weight} alt='altére icon' /></li>
+            <nav className='leftNavbar-list' >
+                {
+                    leftNavbarData.map((data) =>
+                        <LeftNavbarBtn
+                            key={data.className}
+                            className={data.className}
+                            logo={data.logo}
+                            logoInvert={data.logoInvert}
+                            alt={data.alt}
+                        />
+                    )
+                }
             </nav>
             <p className='copyright'>Copyright, SportSee 2020</p>
         </section>
