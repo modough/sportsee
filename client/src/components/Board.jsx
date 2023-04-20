@@ -1,6 +1,8 @@
 import '../styles/board.css'
 import UserName from './UserName'
 import Chart from './chart'
+import { dataBase } from '../data/db'
+import { useParams } from 'react-router-dom'
 
 /**
  * The function returns a section containing a UserName component and a Chart component, and is
@@ -10,10 +12,13 @@ import Chart from './chart'
  * "board".
  */
 function Board() {
+    const { id } = useParams()
+    const userData = dataBase.find((data) => { return data.id === parseInt(id) })
+    console.log(userData)
     return (
         <section id='board'>
-            <UserName />
-            <Chart />
+            <UserName data={userData} />
+            <Chart data={userData} />
         </section>
     )
 }

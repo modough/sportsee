@@ -6,12 +6,15 @@ import '../styles/userName.css'
  * @returns A React component called `UserName` is being returned. It contains a section with two divs,
  * one with a greeting and a name, and the other with a congratulatory message.
  */
-function UserName() {
+function UserName({ data }) {
+    const name = data.data.userInfos.firstName
+    console.log(name)
+
     return (
         <section className='informations'>
             <div className='userInfos'>
                 <p>Bonjour</p>
-                <h1 className='name'>Name</h1>
+                <h1 className='name'>{name}</h1>
             </div>
             <p className='scoring-message'>
                 Félicitation ! Vous avez explosé vos objectifs hier 👏

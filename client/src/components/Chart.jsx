@@ -10,7 +10,7 @@ elements inside. The first article element has two div elements with some text a
 two li elements. The second article element has four div elements with an image and some text inside
 each one. The component is exported as default. */
 
-function Chart() {
+function Chart({ data }) {
     return (
         <section className='chart'>
             <article className='left-chart'>
@@ -21,7 +21,7 @@ function Chart() {
                     <Score />
                 </div>
             </article>
-            <Biology />
+            <Biology data={data} />
         </section>
     )
 }
