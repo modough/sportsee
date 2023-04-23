@@ -1,3 +1,4 @@
+import React from 'react'
 import '../styles/score.css';
 
 function Score() {

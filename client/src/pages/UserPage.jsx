@@ -1,3 +1,4 @@
+import React from 'react'
 import Board from "../components/Board"
 import LeftNavbar from '../components/LeftNavbar'
 
@@ -12,9 +13,6 @@ import LeftNavbar from '../components/LeftNavbar'
  * `Board` component wrapped in a `section` element with the `id` of "userPage".
  */
 function UserPage() {
-
-
-
     return (
         <section id="userPage">
             <LeftNavbar />

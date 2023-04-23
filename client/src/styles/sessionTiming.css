@@ -1,6 +1,22 @@
 .bottomInfosDiv.session-timing {
 	background-color: #ff0000;
+	padding: 10px 20px;
 }
 .bottomInfosDiv.session-timing p {
+	width: 190px;
 	opacity: 0.5;
+}
+
+.custom-tooltip .time {
+	border: 0px solid transparent;
+
+	height: 40px;
+	margin: 0;
+	padding: 10px;
+	background-color: #ffff;
+	color: black;
+}
+.custom-tooltip .time:focus {
+	outline: 0 none;
+	border: transparent;
 }

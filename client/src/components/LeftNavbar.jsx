@@ -1,7 +1,5 @@
+import React from 'react'
 import '../styles/leftNavbar.css'
-import Yoga from '../assets/yoga.svg'
-
-
 import { leftNavbarData } from '../utils/leftNavbarData'
 import LeftNavbarBtn from './LeftNavbarBtn'
 

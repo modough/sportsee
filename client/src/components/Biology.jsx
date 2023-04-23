@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/biology.css'
 import Calories from '../assets/calories.svg'
 import Proteins from '../assets/protein.svg'
@@ -38,6 +40,10 @@ function Biology({ data }) {
             </div>
         </article>
     )
+}
+
+Biology.propTypes = {
+    data: PropTypes.object,
 }
 
 export default Biology

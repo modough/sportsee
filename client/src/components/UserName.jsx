@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/userName.css'
 
 /**
@@ -21,6 +23,10 @@ function UserName({ data }) {
             </p>
         </section>
     )
+}
+
+UserName.propTypes = {
+    data: PropTypes.object
 }
 
 export default UserName

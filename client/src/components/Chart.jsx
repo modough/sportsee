@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/chart.css'
 import DailyActivity from './DailyActivity'
 import SessionTiming from './SessionTiming'
@@ -16,7 +18,7 @@ function Chart({ data }) {
             <article className='left-chart'>
                 <DailyActivity />
                 <div className='chart-bottomInfos'>
-                    <SessionTiming />
+                    <SessionTiming data={data} />
                     <Intensity />
                     <Score />
                 </div>
@@ -24,6 +26,10 @@ function Chart({ data }) {
             <Biology data={data} />
         </section>
     )
+}
+
+Chart.propTypes = {
+    data: PropTypes.object,
 }
 
 export default Chart

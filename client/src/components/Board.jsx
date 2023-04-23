@@ -1,3 +1,4 @@
+import React from 'react'
 import '../styles/board.css'
 import UserName from './UserName'
 import Chart from './chart'

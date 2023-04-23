@@ -1,3 +1,4 @@
+import React from 'react'
 import '../styles/intensity.css'
 
 function Intensity() {
