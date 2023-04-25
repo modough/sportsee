@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import '../styles/chart.css'
 import DailyActivity from './DailyActivity'
 import SessionTiming from './SessionTiming'
-import Intensity from './Intensity'
 import Score from './Score'
 import Biology from './Biology'
+import Performance from './Performance'
 
 /* This is a functional component in JavaScript React that returns a section element with two article
 elements inside. The first article element has two div elements with some text and a ul element with
@@ -19,8 +19,8 @@ function Chart({ data }) {
                 <DailyActivity />
                 <div className='chart-bottomInfos'>
                     <SessionTiming data={data} />
-                    <Intensity />
-                    <Score />
+                    <Performance data={data} />
+                    <Score data={data} />
                 </div>
             </article>
             <Biology data={data} />
