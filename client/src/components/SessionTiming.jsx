@@ -12,7 +12,7 @@ function SessionTiming({ data }) {
     const CustomizedCursor = ({ width, points }) => {
         return (
             <Rectangle
-                fill='rgba(0,0,0,0.1)'
+                fill='rgba(0,0,0,0.2)'
                 width={width}
                 height={width}
                 x={points[0].x}
@@ -36,8 +36,8 @@ function SessionTiming({ data }) {
             <p>Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="81%" margin="0">
                 <LineChart width={300} height={100} data={sessionData}>
-                    <Line type="monotone" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
-                    <XAxis data='x' axisLine={false} tickLine={false} tickMargin={0} type="string" ticks={["L", "M", "M", "J", "V", "S", "D"]} />
+                    <Line type="natural" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
+                    <XAxis data='day' stroke="#ffff" axisLine={false} tickLine={false} tickMargin={0} />
                     <Tooltip cursor={<CustomizedCursor />} content={CustomTooltip} />
                 </LineChart>
             </ResponsiveContainer>
