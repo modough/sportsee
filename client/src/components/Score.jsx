@@ -4,22 +4,21 @@ import PropTypes from 'prop-types'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 
 function Score({ data }) {
-    const scorePercent = data.data.todayScore
-    const newData = [{ value: scorePercent * 100, fill: 'red', cornerRadius: 50 }];
+    const scorePercent = data.data.todayScore * 100 || data.data.score * 100
+    const newData = [{ value: scorePercent, fill: 'red', cornerRadius: 50 }];
 
     return (
         <div className='bottomInfosDiv score'>
             <p className='title'>Score</p>
             <ResponsiveContainer width="100%" height="100%">
-                <RadialBarChart
-                    innerRadius="80%" outerRadius="100%" barSize={10} data={newData}>
+                <RadialBarChart startAngle={180} endAngle={90 - scorePercent}
+                    innerRadius="80%" outerRadius="100%" barSize={15} data={newData}>
                     <RadialBar minAngle={10}
-                        label={{ position: 'insideStart', fill: '#fff' }}
-                        clockWise dataKey="value" />
+                        dataKey="value" />
                 </RadialBarChart>
             </ResponsiveContainer>
             <span className='scoreText'>
-                {scorePercent * 100}%
+                {scorePercent}%
                 <p>de votre objectif</p>
             </span>
         </div>

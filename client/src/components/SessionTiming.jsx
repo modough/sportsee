@@ -1,44 +1,52 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/sessionTiming.css'
-import { LineChart, Line, XAxis, ResponsiveContainer, Tooltip, Rectangle } from 'recharts';
-
-
-
+import { LineChart, Line, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
+import { CustomizedCursor } from '../utils/CustomizedCursor';
+import { CustomTooltip } from '../utils/CustomTooltip';
 
 function SessionTiming({ data }) {
     const sessionData = data.averageSessions.sessions
 
-    const CustomizedCursor = ({ width, points }) => {
-        return (
-            <Rectangle
-                fill='rgba(0,0,0,0.2)'
-                width={width}
-                height={width}
-                x={points[0].x}
-            />
-        );
-    };
+    const newSessionData = sessionData.map((elmt) => {
+        let newDay = ''
 
-    const CustomTooltip = ({ active, payload }) => {
-        if (active && payload && payload.length) {
-            return (
-                <div className="custom-tooltip">
-                    <p className="time">{`${payload[0].value} min`}</p>
-                </div>
-            );
+        if (elmt.day === 1) {
+            newDay = 'L'
         }
-        return null;
-    };
+        else if (elmt.day === 2) {
+
+            newDay = 'M'
+        }
+        else if (elmt.day === 3) {
+            newDay = 'M'
+        }
+        else if (elmt.day === 4) {
+            newDay = 'J'
+        }
+        else if (elmt.day === 5) {
+            newDay = 'V'
+        }
+        else if (elmt.day === 6) {
+            newDay = 'S'
+        }
+        else {
+            newDay = 'D'
+        }
+        return { dayInLetter: newDay, sessionLength: elmt.sessionLength }
+    })
+
+
+    console.log(newSessionData)
 
     return (
         <div className='bottomInfosDiv session-timing'>
             <p>Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="81%" margin="0">
-                <LineChart data={sessionData}>
+                <LineChart data={newSessionData}>
                     <Line type="natural" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
-                    <XAxis data='day' stroke="#ffff" axisLine={false} tickLine={false} tickMargin={0} />
-                    <Tooltip cursor={<CustomizedCursor />} content={CustomTooltip} />
+                    <XAxis dataKey='dayInLetter' stroke="#ffff" axisLine={false} tickLine={false} tickMargin={0} />
+                    <Tooltip cursor={<CustomizedCursor />} content={<CustomTooltip />} />
                 </LineChart>
             </ResponsiveContainer>
         </div>
@@ -47,11 +55,6 @@ function SessionTiming({ data }) {
 
 SessionTiming.propTypes = {
     data: PropTypes.object,
-    day: PropTypes.string,
-    active: PropTypes.bool,
-    payload: PropTypes.string,
-    width: PropTypes.number,
-    points: PropTypes.number
 }
 
 export default SessionTiming
