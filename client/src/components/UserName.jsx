@@ -19,7 +19,7 @@ function UserName({ data }) {
                 <h1 className='name'>{name}</h1>
             </div>
             <p className='scoring-message'>
-                Félicitation ! Vous avez explosé vos objectifs hier 👏
+                Félicitations ! Vous avez explosé vos objectifs hier 👏
             </p>
         </section>
     )
