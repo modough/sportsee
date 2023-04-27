@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/board.css'
 import UserName from './UserName'
-import Chart from './chart'
+import Chart from './Chart'
 import { dataBase } from '../data/db'
 import { useParams } from 'react-router-dom'
 
