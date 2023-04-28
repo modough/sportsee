@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	flex: 1;
+	height: 100%;
 }
 .biology > div {
 	display: flex;
@@ -17,4 +17,18 @@
 	font-weight: 700;
 	margin: 0;
 	margin-bottom: 5px;
+}
+
+@media (width<1274px) {
+	.biology {
+		flex-direction: row;
+	}
+	.biology > div {
+		padding: 25px;
+	}
+}
+@media (width<1024px) {
+	.biology > div {
+		padding: 15px;
+	}
 }

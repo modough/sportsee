@@ -43,9 +43,9 @@ function SessionTiming({ data }) {
         <div className='bottomInfosDiv session-timing'>
             <p>Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="81%" margin="0">
-                <LineChart data={newSessionData}>
-                    <Line type="natural" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
-                    <XAxis dataKey='dayInLetter' stroke="#ffff" axisLine={false} tickLine={false} tickMargin={0} />
+                <LineChart data={newSessionData} >
+                    <Line className="line" type="monotone" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
+                    <XAxis dataKey='dayInLetter' stroke="#ffff" axisLine={false} tickLine={false} />
                     <Tooltip cursor={<CustomizedCursor />} content={<CustomTooltip />} />
                 </LineChart>
             </ResponsiveContainer>

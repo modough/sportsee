@@ -13,6 +13,7 @@ two li elements. The second article element has four div elements with an image 
 each one. The component is exported as default. */
 
 function Chart({ data }) {
+
     return (
         <section className='chart'>
             <article className='left-chart'>
@@ -23,7 +24,9 @@ function Chart({ data }) {
                     <Score data={data} />
                 </div>
             </article>
-            <Biology data={data} />
+            <article className='right-chart'>
+                <Biology data={data} />
+            </article>
         </section>
     )
 }

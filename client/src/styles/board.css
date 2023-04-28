@@ -1,3 +1,13 @@
 #board {
-	padding: 150px 200px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding: 25px 75px;
+}
+
+@media (width <= 1024px) {
+	#board {
+		padding: 50px;
+	}
 }

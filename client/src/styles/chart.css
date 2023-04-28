@@ -5,20 +5,29 @@
 .left-chart {
 	display: flex;
 	flex-direction: column;
-	flex: 4;
+	flex: 3;
 	gap: 50px;
+}
+.right-chart {
+	flex: 1;
 }
 .chart-bottomInfos {
 	display: flex;
 	flex-direction: row;
-	gap: 50px;
+	justify-content: space-between;
+	height: 300px;
 }
 .bottomInfosDiv {
-	width: 33%;
-	height: 320px;
+	width: 30%;
 	border-radius: 5px;
 }
 .bottomInfosDiv p {
 	color: #fff;
 	font-weight: 500;
+}
+
+@media (width < 1274px) {
+	.chart {
+		flex-direction: column-reverse;
+	}
 }

@@ -1,6 +1,7 @@
 .bottomInfosDiv.score {
 	position: relative;
-	background-color: #fff;
+	background: #fbfbfb;
+	padding: 10px 20px;
 }
 
 .bottomInfosDiv.score .title {
@@ -10,10 +11,10 @@
 .scoreText {
 	position: absolute;
 	top: 40%;
-	left: 43%;
+	left: 40%;
 	color: #282d30;
 	font-weight: 700;
-	font-size: 26px;
+	font-size: 28px;
 }
 .scoreText p {
 	font-weight: 700;

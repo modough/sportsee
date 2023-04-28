@@ -14,8 +14,8 @@ function BiologyCard({ image, keyData, text }) {
     )
 }
 BiologyCard.propTypes = {
-    image: PropTypes.object,
-    keyData: PropTypes.object,
+    image: PropTypes.string,
+    keyData: PropTypes.number,
     text: PropTypes.string
 }
 export default BiologyCard

@@ -33,7 +33,7 @@ function Performance({ data }) {
     return (
         <div className='bottomInfosDiv intensity'>
             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart outerRadius="75%" data={newPerformanceData}>
+                <RadarChart outerRadius="75%" data={newPerformanceData} tickLine={false}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="kindTitle" tick={{ fill: "white", fontSize: 12 }} />
                     <Radar dataKey="value" stroke="#FF0101B2" fill="rgba(255, 1, 1, 0.7)" fillOpacity={0.6} />
