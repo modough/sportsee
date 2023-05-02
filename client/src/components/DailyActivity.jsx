@@ -6,7 +6,8 @@ import { CustomTooltip } from '../utils/CustomTooltip';
 
 
 function DailyActivity({ activity }) {
-    const { sessions } = activity.data
+    console.log(activity);
+    const { sessions } = activity.activity || activity.data
 
     return (
         <div className="dailyActivity">

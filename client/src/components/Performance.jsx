@@ -5,7 +5,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 
 function Performance({ performance }) {
     console.log(performance)
-    const { data } = performance.data || performance.performance
+    const { data } = performance.performance || performance.data
     const newPerformanceData = data.map((elmt) => {
         let newKind = ''
         if (elmt.kind === 1) {

@@ -7,7 +7,7 @@ import { CustomTooltip } from '../utils/CustomTooltip';
 
 function SessionTiming({ session }) {
 
-    const { sessions } = session.data || session.averageSessions
+    const { sessions } = session.averageSessions || session.data
     const newSessionData = sessions.map((elmt) => {
         let newDay = ''
 
