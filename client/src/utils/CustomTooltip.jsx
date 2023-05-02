@@ -1,12 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from 'prop-types'
+import '../styles/customTooltip.css';
 
-export const CustomTooltip = ({ active, payload }) => {
+export const CustomTooltip = ({ active, payload, style }) => {
     if (active && payload && payload.length) {
         return (
-            <div className="custom-tooltip">
-                <p className="time">{`${payload[0].value} min`}</p>
-            </div>
+            <Fragment>
+                {
+                    style === 'session' ?
+                        <div className="custom-tooltip session">
+                            <p className="time"> {`${payload[0].value} min`} </p>
+                        </div> :
+                        <div className='custom-tooltip activity'>
+                            <p className='label-kilogram'>
+                                {`${payload[0].value}kg`}
+                            </p>
+                            <p className='label-calory'>
+                                {`${payload[1].value}kcal`}
+                            </p>
+                        </div>
+                }
+            </Fragment>
         );
     }
     return null;
@@ -15,4 +29,5 @@ export const CustomTooltip = ({ active, payload }) => {
 CustomTooltip.propTypes = {
     active: PropTypes.bool,
     payload: PropTypes.array,
+    style: PropTypes.string
 }

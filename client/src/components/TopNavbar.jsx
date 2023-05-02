@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
 import '../styles/topNavbar.css'
+import { Link } from 'react-router-dom'
 
 /**
  * This is a React component that renders a top navigation bar with a logo and a list of links.
@@ -14,7 +15,7 @@ function TopNavbar() {
                 <img src={Logo} alt="logo du site" />
             </div>
             <ul className='topNavbar-list'>
-                <li>Accueil</li>
+                <li><Link to='/'>Accueil</Link></li>
                 <li>Profil</li>
                 <li>Réglages</li>
                 <li>Communauté</li>

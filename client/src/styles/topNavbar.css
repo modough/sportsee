@@ -16,6 +16,16 @@
 	font-size: 24px;
 	font-weight: 500;
 }
-.topNavbar-list li {
+
+.topNavbar-list li a {
 	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+}
+
+@media (width < 1024px) {
+	.topNavbar-list {
+		width: 70%;
+		font-size: 20px;
+	}
 }

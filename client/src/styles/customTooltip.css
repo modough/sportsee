@@ -1,0 +1,31 @@
+.custom-tooltip {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 0px solid transparent;
+	width: 75px;
+}
+.custom-tooltip.session {
+	height: 40px;
+	background-color: #ffff;
+	padding-left: 10px;
+}
+.custom-tooltip.activity {
+	flex-direction: column;
+	gap: 1px;
+	height: 100px;
+	padding-left: 4px;
+	background-color: #e60000;
+}
+.custom-tooltip.activity p {
+	color: #ffff;
+}
+.custom-tooltip .time {
+	font-weight: 700;
+	color: black;
+	width: 20px;
+}
+.custom-tooltip .time:focus {
+	outline: 0 none;
+}

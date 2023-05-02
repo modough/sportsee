@@ -1,12 +1,12 @@
 import React from 'react'
-import '../styles/intensity.css'
+import '../styles/performance.css'
 import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
 function Performance({ performance }) {
     console.log(performance)
-    const performanceData = performance.data.data || performance.performance.data
-    const newPerformanceData = performanceData.map((elmt) => {
+    const { data } = performance.data || performance.performance
+    const newPerformanceData = data.map((elmt) => {
         let newKind = ''
         if (elmt.kind === 1) {
             newKind = 'Cardio'

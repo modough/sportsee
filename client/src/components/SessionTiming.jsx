@@ -6,10 +6,9 @@ import { CustomizedCursor } from '../utils/CustomizedCursor';
 import { CustomTooltip } from '../utils/CustomTooltip';
 
 function SessionTiming({ session }) {
-    console.log(session)
-    const sessionData = session.data.sessions || session.averageSessions.sessions
 
-    const newSessionData = sessionData.map((elmt) => {
+    const { sessions } = session.data || session.averageSessions
+    const newSessionData = sessions.map((elmt) => {
         let newDay = ''
 
         if (elmt.day === 1) {
@@ -37,9 +36,6 @@ function SessionTiming({ session }) {
         return { dayInLetter: newDay, sessionLength: elmt.sessionLength }
     })
 
-
-    console.log(newSessionData)
-
     return (
         <div className='bottomInfosDiv session-timing'>
             <p>Durée moyenne des sessions</p>
@@ -47,7 +43,7 @@ function SessionTiming({ session }) {
                 <LineChart data={newSessionData} >
                     <Line className="line" type="monotone" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
                     <XAxis dataKey='dayInLetter' stroke="#ffff" axisLine={false} tickLine={false} />
-                    <Tooltip cursor={<CustomizedCursor />} content={<CustomTooltip />} />
+                    <Tooltip cursor={<CustomizedCursor />} content={<CustomTooltip style='session' />} />
                 </LineChart>
             </ResponsiveContainer>
         </div>
