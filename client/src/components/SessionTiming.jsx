@@ -5,6 +5,14 @@ import { LineChart, Line, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { CustomizedCursor } from '../utils/CustomizedCursor';
 import { CustomTooltip } from '../utils/CustomTooltip';
 
+/**
+ * This is a React component that displays the average session duration for each day of the week in a
+ * line chart.
+ * @returns A React component that displays a line chart representing the average length of sessions
+ * for each day of the week. The chart is based on data passed through the `session` prop. The
+ * component also includes a tooltip and a customized cursor.
+ */
+
 function SessionTiming({ session }) {
 
     const { sessions } = session.averageSessions || session.data

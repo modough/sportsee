@@ -3,6 +3,14 @@ import '../styles/performance.css'
 import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
+/* This is a React functional component called `Performance` that takes in a prop called `performance`.
+It maps the `data` property of the `performance` prop to a new array of objects with `kindTitle` and
+`value` properties. It then renders a `RadarChart` component from the `recharts` library using the
+new array of objects as data. The `kindTitle` property is used as the data key for the
+`PolarAngleAxis` component and the `value` property is used as the data key for the `Radar`
+component. The component also has a `propTypes` object that specifies that the `performance` prop
+should be an object. */
+
 function Performance({ performance }) {
     console.log(performance)
     const { data } = performance.performance || performance.data

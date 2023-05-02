@@ -2,6 +2,12 @@ import React from 'react'
 import '../styles/welcomePage.css'
 import { Link } from 'react-router-dom'
 
+/**
+ * The function returns a React component for a welcome page with links to two user profiles.
+ * @returns The `WelcomePage` component is being returned, which contains a welcome message, a
+ * description of the app, and two buttons that link to different user profiles.
+ */
+
 function WelcomePage() {
     return (
         <div className='welcomePage'>

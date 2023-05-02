@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { dataBase } from "../data/db";
 
 
+
 /* This code defines a custom React hook called `FetchDatas` that takes in two parameters: `url` and
 `id`. It uses the `useState` and `useEffect` hooks to manage state and perform side effects
 respectively. */
+
+
 const MOCKED_DATA = false;
 
 

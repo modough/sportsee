@@ -5,6 +5,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { CustomTooltip } from '../utils/CustomTooltip';
 
 
+/* This is a React functional component called `DailyActivity` that takes in a prop called `activity`
+and returns a JSX element. The component renders a bar chart using the `recharts` library based on
+the data passed in through the `activity` prop. The chart displays the user's weight and calories
+burned over a period of time. The `CustomTooltip` component is used to customize the tooltip
+displayed when hovering over the chart. The `PropTypes` library is used to define the expected type
+of the `activity` prop. Finally, the component is exported as the default export. */
+
 function DailyActivity({ activity }) {
     console.log(activity);
     const { sessions } = activity.activity || activity.data

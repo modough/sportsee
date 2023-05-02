@@ -9,11 +9,14 @@ import { useParams } from 'react-router-dom'
 import FetchDatas from '../utils/FetchDatas'
 
 
-/* This is a functional component in JavaScript React that returns a section element with two article
-elements inside. The first article element has two div elements with some text and a ul element with
-two li elements. The second article element has four div elements with an image and some text inside
-each one. The component is exported as default. */
 
+
+/**
+ * The Chart function fetches data from various endpoints and renders different components based on the
+ * fetched data.
+ * @returns The Chart component is being returned, which contains several child components that are
+ * conditionally rendered based on whether their respective data has been fetched successfully.
+ */
 function Chart() {
     const { id } = useParams()
     const mainData = FetchDatas(`http://localhost:3000/user/${id}`, id)

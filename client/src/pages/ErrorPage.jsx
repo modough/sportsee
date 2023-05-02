@@ -2,6 +2,13 @@ import React from 'react'
 import { useRouteError, Link } from "react-router-dom";
 import '../styles/errorPage.css';
 
+/**
+ * This is a React component for an error page that displays an error message and a link to return to
+ * the homepage.
+ * @returns The ErrorPage component is being returned, which displays an error message and a link to
+ * return to the homepage. The error status code is also displayed, or a default value of 404 if no
+ * status code is provided.
+ */
 function ErrorPage() {
 
     const error = useRouteError();
