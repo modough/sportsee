@@ -16,11 +16,11 @@ First Run
 npm install
 to install all neccessary dependencies
 
-Then
-Open the backend directory (cd api), run :
+After that 
+Open the backend directory (cd api), then run:
 npm start
 this will run the server on port 3000.
 
-Open the project directory (cd client),  run:
+Open the project directory (cd client), then run:
 npm run dev
-This will bring you to the http://localhost:5173 to view it in your browser.
+This will bring you to the http://localhost:5173 to view the app in your browser.
