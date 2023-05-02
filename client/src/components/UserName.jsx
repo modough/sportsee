@@ -9,14 +9,16 @@ import '../styles/userName.css'
  * one with a greeting and a name, and the other with a congratulatory message.
  */
 function UserName({ data }) {
-    const name = data.data.userInfos.firstName
-    console.log(name)
+
+    console.log(data)
+
+    const { firstName } = data.data.userInfos
 
     return (
         <section className='informations'>
             <div className='userInfos'>
                 <p>Bonjour</p>
-                <h1 className='name'>{name}</h1>
+                <h1 className='name'>{firstName}</h1>
             </div>
             <p className='scoring-message'>
                 Félicitations ! Vous avez explosé vos objectifs hier 👏

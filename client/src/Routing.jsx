@@ -1,9 +1,15 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import App from './App';
 import ErrorPage from './pages/ErrorPage';
+import App from './components/App';
+import WelcomePage from './pages/WelcomePage';
 
 const Routing = createBrowserRouter([
+    {
+        path: "/",
+        element: <WelcomePage />,
+        errorElement: <ErrorPage />
+    },
     {
         path: "/user/:id",
         type: "exact",
@@ -11,7 +17,7 @@ const Routing = createBrowserRouter([
         errorElement: <ErrorPage />
     },
     {
-        path: "*",
+        path: "/*",
         element: <ErrorPage />
     }
 ]);

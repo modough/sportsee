@@ -6,7 +6,7 @@ import { CustomizedCursor } from '../utils/CustomizedCursor';
 import { CustomTooltip } from '../utils/CustomTooltip';
 
 function SessionTiming({ data }) {
-    const sessionData = data.averageSessions.sessions
+    const sessionData = data.averageSessions.sessions || data.data.sessions
 
     const newSessionData = sessionData.map((elmt) => {
         let newDay = ''

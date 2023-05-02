@@ -2,8 +2,9 @@ import React from 'react'
 import '../styles/board.css'
 import UserName from './UserName'
 import Chart from './Chart'
-import { dataBase } from '../data/db'
 import { useParams } from 'react-router-dom'
+import FetchDatas from '../utils/FetchDatas'
+
 
 /**
  * The function returns a section containing a UserName component and a Chart component, and is
@@ -14,12 +15,13 @@ import { useParams } from 'react-router-dom'
  */
 function Board() {
     const { id } = useParams()
-    const userData = dataBase.find((data) => { return data.id === parseInt(id) })
-    console.log(userData)
+    const userNameData = FetchDatas(`http://localhost:3000/user/${id}`, id)
+    const chartData = FetchDatas(`http://localhost:3000/user/${id}/average-sessions`, id)
+
     return (
         <section id='board'>
-            <UserName data={userData} />
-            <Chart data={userData} />
+            {userNameData && <UserName data={userNameData} />}
+            {chartData && <Chart data={chartData} />}
         </section>
     )
 }
