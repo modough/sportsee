@@ -3,8 +3,9 @@ import '../styles/intensity.css'
 import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
-function Performance({ data }) {
-    const performanceData = data.performance.data
+function Performance({ performance }) {
+    console.log(performance)
+    const performanceData = performance.data.data || performance.performance.data
     const newPerformanceData = performanceData.map((elmt) => {
         let newKind = ''
         if (elmt.kind === 1) {
@@ -44,6 +45,6 @@ function Performance({ data }) {
 }
 
 Performance.propTypes = {
-    data: PropTypes.object
+    performance: PropTypes.object
 }
 export default Performance

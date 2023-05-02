@@ -15,13 +15,12 @@ import FetchDatas from '../utils/FetchDatas'
  */
 function Board() {
     const { id } = useParams()
-    const userNameData = FetchDatas(`http://localhost:3000/user/${id}`, id)
-    const chartData = FetchDatas(`http://localhost:3000/user/${id}/average-sessions`, id)
+    const mainData = FetchDatas(`http://localhost:3000/user/${id}`, id)
 
     return (
         <section id='board'>
-            {userNameData && <UserName data={userNameData} />}
-            {chartData && <Chart data={chartData} />}
+            {mainData && <UserName data={mainData} />}
+            <Chart />
         </section>
     )
 }

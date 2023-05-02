@@ -5,8 +5,9 @@ import { LineChart, Line, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { CustomizedCursor } from '../utils/CustomizedCursor';
 import { CustomTooltip } from '../utils/CustomTooltip';
 
-function SessionTiming({ data }) {
-    const sessionData = data.averageSessions.sessions || data.data.sessions
+function SessionTiming({ session }) {
+    console.log(session)
+    const sessionData = session.data.sessions || session.averageSessions.sessions
 
     const newSessionData = sessionData.map((elmt) => {
         let newDay = ''
@@ -54,7 +55,7 @@ function SessionTiming({ data }) {
 }
 
 SessionTiming.propTypes = {
-    data: PropTypes.object,
+    session: PropTypes.object,
 }
 
 export default SessionTiming

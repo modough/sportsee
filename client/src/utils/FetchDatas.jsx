@@ -8,7 +8,7 @@ const FetchDatas = (url, id) => {
 
     useEffect(() => {
 
-        if (!REACT_MOCKED_DATA) {
+        if (REACT_MOCKED_DATA) {
             setUserData(dataBase.find((data) => { return data.id === parseInt(id) }))
         } else {
             fetch(url)

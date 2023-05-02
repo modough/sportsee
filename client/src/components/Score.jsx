@@ -3,8 +3,9 @@ import '../styles/score.css';
 import PropTypes from 'prop-types'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 
-function Score({ data }) {
-    const scorePercent = data.data.todayScore * 100 || data.data.score * 100
+function Score({ score }) {
+    console.log(score)
+    const scorePercent = score.data.todayScore * 100 || score.data.score * 100
     const newData = [{ value: scorePercent, fill: 'red', cornerRadius: 50 }];
 
     return (
@@ -25,6 +26,6 @@ function Score({ data }) {
     )
 }
 Score.propTypes = {
-    data: PropTypes.object
+    score: PropTypes.object
 }
 export default Score
