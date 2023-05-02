@@ -11,13 +11,13 @@ git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboar
 Follow the instruction for the backend
 The instructions are on the README at https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
-First Run
+
 
 npm install
 
 to install all neccessary dependencies
 
-After that 
+
 
 Open the backend directory (cd api), then run:
 
