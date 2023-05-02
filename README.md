@@ -14,6 +14,7 @@ The instructions are on the README at https://github.com/OpenClassrooms-Student-
 First Run
 
 npm install
+
 to install all neccessary dependencies
 
 After that 
