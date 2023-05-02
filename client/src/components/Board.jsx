@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import '../styles/board.css'
 import UserName from './UserName'
-import Chart from './Chart'
+
 import { useParams } from 'react-router-dom'
 import FetchDatas from '../utils/FetchDatas'
+import LoadingPage from '../pages/LoadingPage'
 
 /**
  * The Board function returns a section containing a UserName component and a Chart component, using
@@ -16,11 +17,15 @@ import FetchDatas from '../utils/FetchDatas'
 function Board() {
     const { id } = useParams()
     const mainData = FetchDatas(`http://localhost:3000/user/${id}`, id)
+    const Chart = lazy(() => import('../components/Chart.jsx'))
 
     return (
         <section id='board'>
-            {mainData && <UserName data={mainData} />}
-            <Chart />
+            <Suspense fallback={<LoadingPage />}>
+                {mainData && <UserName data={mainData} />}
+                <Chart />
+            </Suspense>
+
         </section>
     )
 }
