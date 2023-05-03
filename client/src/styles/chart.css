@@ -26,8 +26,19 @@
 	font-weight: 500;
 }
 
-@media (width < 1274px) {
+@media (width <= 1274px) {
 	.chart {
 		flex-direction: column-reverse;
+	}
+}
+@media (width <= 1024px) {
+	.chart {
+		flex-direction: column-reverse;
+	}
+	.left-chart {
+		width: 97%;
+	}
+	.right-chart {
+		width: 97%;
 	}
 }

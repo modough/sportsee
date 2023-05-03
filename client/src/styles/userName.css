@@ -20,3 +20,9 @@
 	font-weight: 400;
 	margin: 0;
 }
+
+@media (width <= 1024px) {
+	.informations {
+		width: 97%;
+	}
+}

@@ -4,7 +4,7 @@
 	align-items: center;
 	gap: 100px;
 	width: 117px;
-	height: auto;
+
 	background-color: #000;
 	padding: 150px 0;
 }
@@ -23,11 +23,4 @@
 	rotate: 270deg;
 	font-size: 12px;
 	font-weight: 500;
-}
-
-@media (width <= 1024px) {
-	#board {
-		width: 900px;
-		padding: 50px;
-	}
 }

@@ -23,5 +23,5 @@ export const CustomizedCursor = ({ width, points }) => {
 };
 CustomizedCursor.propTypes = {
     width: PropTypes.number,
-    points: PropTypes.number
+    points: PropTypes.array
 }

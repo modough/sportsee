@@ -19,7 +19,7 @@
 	margin-bottom: 5px;
 }
 
-@media (width<1274px) {
+@media (width <= 1274px) {
 	.biology {
 		flex-direction: row;
 	}
@@ -27,7 +27,10 @@
 		padding: 25px;
 	}
 }
-@media (width<1024px) {
+@media (width <= 1024px) {
+	.biology {
+		width: 740px;
+	}
 	.biology > div {
 		padding: 15px;
 	}
