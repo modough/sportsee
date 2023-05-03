@@ -25,7 +25,6 @@ function Board() {
                 {mainData && <UserName data={mainData} />}
                 <Chart />
             </Suspense>
-
         </section>
     )
 }

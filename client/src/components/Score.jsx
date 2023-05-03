@@ -11,7 +11,6 @@ and their goal score. The component uses the `RadialBarChart` and `RadialBar` co
 the `score` prop. */
 
 function Score({ score }) {
-    console.log(score)
     const scorePercent = score.data.todayScore * 100 || score.data.score * 100
     const newData = [{ value: scorePercent, fill: 'red', cornerRadius: 50 }];
 
@@ -21,8 +20,7 @@ function Score({ score }) {
             <ResponsiveContainer width="100%" height="100%">
                 <RadialBarChart startAngle={180} endAngle={90 - scorePercent}
                     innerRadius="80%" outerRadius="100%" barSize={15} data={newData}>
-                    <RadialBar minAngle={10}
-                        dataKey="value" />
+                    <RadialBar minAngle={10} dataKey="value" />
                 </RadialBarChart>
             </ResponsiveContainer>
             <span className='scoreText'>

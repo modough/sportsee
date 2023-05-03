@@ -12,7 +12,6 @@ component. The component also has a `propTypes` object that specifies that the `
 should be an object. */
 
 function Performance({ performance }) {
-    console.log(performance)
     const { data } = performance.performance || performance.data
     const newPerformanceData = data.map((elmt) => {
         let newKind = ''
@@ -37,7 +36,6 @@ function Performance({ performance }) {
 
         return { kindTitle: newKind, value: elmt.value }
     })
-    console.log(newPerformanceData)
 
     return (
         <div className='bottomInfosDiv intensity'>

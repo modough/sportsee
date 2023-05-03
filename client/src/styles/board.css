@@ -2,13 +2,12 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
+	width: 90%;
 	padding: 25px 75px;
 }
 
 @media (width <= 1024px) {
 	#board {
-		max-width: 850px;
 		padding: 20px;
 	}
 }

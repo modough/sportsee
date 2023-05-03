@@ -1,14 +1,13 @@
 .bottomInfosDiv.session-timing {
 	position: relative;
 	background-color: #ff0000;
-	padding: 10px 20px;
+	padding: 10px;
 }
 .bottomInfosDiv.session-timing .title {
 	position: absolute;
 	width: 190px;
 	opacity: 0.5;
 }
-
 .line {
 	position: absolute;
 	bottom: 0;

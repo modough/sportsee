@@ -28,9 +28,6 @@
 	}
 }
 @media (width <= 1024px) {
-	.biology {
-		width: 740px;
-	}
 	.biology > div {
 		padding: 15px;
 	}

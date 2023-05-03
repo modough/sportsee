@@ -24,7 +24,6 @@
 
 @media (width <= 1024px) {
 	.topNavbar-list {
-		width: 70%;
 		font-size: 20px;
 	}
 }

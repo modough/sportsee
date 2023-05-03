@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/leftNavbar.css'
-import { leftNavbarData } from '../utils/leftNavbarData'
+import { leftNavbarData } from '../utils/LeftNavbarData'
 import LeftNavbarBtn from './LeftNavbarBtn'
 
 /**

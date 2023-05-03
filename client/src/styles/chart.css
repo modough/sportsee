@@ -35,10 +35,4 @@
 	.chart {
 		flex-direction: column-reverse;
 	}
-	.left-chart {
-		width: 97%;
-	}
-	.right-chart {
-		width: 97%;
-	}
 }

@@ -13,7 +13,6 @@ displayed when hovering over the chart. The `PropTypes` library is used to defin
 of the `activity` prop. Finally, the component is exported as the default export. */
 
 function DailyActivity({ activity }) {
-    console.log(activity);
     const { sessions } = activity.activity || activity.data
 
     return (
