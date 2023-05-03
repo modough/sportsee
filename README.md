@@ -4,7 +4,6 @@ Sports coaching with a dynamic dashboard. Work with backend available at : https
 
 #Getting Started
 
-INSTALLING
 Clone this repo with the command
 git clone https://github.com/modough/sportsee.git
 Clone backend repo with the command
@@ -12,13 +11,22 @@ git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboar
 Follow the instruction for the backend
 The instructions are on the README at https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
+
+
 npm install
 
-RUN
-In the backend directory, run :
-npm start
-Run your image on port 3000.
+to install all neccessary dependencies
 
-In the project directory, run:
+
+
+Open the backend directory (cd api), then run:
+
+npm start
+
+this will run the server on port 3000.
+
+Open the project directory (cd client), then run:
+
 npm run dev
-Open http://localhost:5173 to view it in your browser.
+
+This will bring you to the http://localhost:5173 to view the app in your browser.
