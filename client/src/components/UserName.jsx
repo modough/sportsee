@@ -11,8 +11,8 @@ import '../styles/userName.css'
  * congratulatory message. The `data` prop is expected to be an object and is validated using
  * PropTypes.
  */
-function UserName({ data }) {
-    const { firstName } = data.data.userInfos
+function UserName({ firstName }) {
+
 
     return (
         <section className='informations'>
@@ -28,7 +28,7 @@ function UserName({ data }) {
 }
 
 UserName.propTypes = {
-    data: PropTypes.object
+    firstName: PropTypes.string.isRequired
 }
 
 export default UserName

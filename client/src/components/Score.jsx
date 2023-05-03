@@ -11,7 +11,7 @@ and their goal score. The component uses the `RadialBarChart` and `RadialBar` co
 the `score` prop. */
 
 function Score({ score }) {
-    const scorePercent = score.data.todayScore * 100 || score.data.score * 100
+    const scorePercent = score * 100
     const newData = [{ value: scorePercent, fill: 'red', cornerRadius: 50 }];
 
     return (
@@ -31,6 +31,6 @@ function Score({ score }) {
     )
 }
 Score.propTypes = {
-    score: PropTypes.object
+    score: PropTypes.number
 }
 export default Score

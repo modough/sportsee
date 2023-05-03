@@ -2,10 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-/* This is a functional React component called `BiologyCard` that takes in three props: `image`,
-`keyData`, and `text`. It returns a JSX element that displays an image, a key data value (in kCal),
-and some text. The component also defines PropTypes for each prop to ensure they are of the correct
-data type. Finally, the component is exported as the default export. */
+/**
+ * The BiologyCard component, which displays a biology data card.
+ * @param {Object} props - The props for the component.
+ * @param {string} props.image - The image URL for the card.
+ * @param {number} props.keyData - The biology data to display.
+ * @param {string} props.text - The text to display on the card.
+ * @returns {JSX.Element} The rendered component.
+ */
 
 function BiologyCard({ image, keyData, text }) {
     return (

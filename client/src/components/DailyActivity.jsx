@@ -5,15 +5,16 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { CustomTooltip } from '../utils/CustomTooltip';
 
 
-/* This is a React functional component called `DailyActivity` that takes in a prop called `activity`
-and returns a JSX element. The component renders a bar chart using the `recharts` library based on
-the data passed in through the `activity` prop. The chart displays the user's weight and calories
-burned over a period of time. The `CustomTooltip` component is used to customize the tooltip
-displayed when hovering over the chart. The `PropTypes` library is used to define the expected type
-of the `activity` prop. Finally, the component is exported as the default export. */
+/**
+ * Displays a daily activity bar chart with weight and calorie information.
+ * @param {Object[]} sessions - An array of objects containing data for each day's activity.
+ * @param {string} sessions[].name - The name of the day.
+ * @param {number} sessions[].kilogram - The weight in kilograms.
+ * @param {number} sessions[].calories - The number of calories burned.
+ * @returns {JSX.Element} - A React component that displays the daily activity bar chart.
+ */
 
-function DailyActivity({ activity }) {
-    const { sessions } = activity.activity || activity.data
+function DailyActivity({ sessions }) {
 
     return (
         <div className="dailyActivity">
@@ -26,15 +27,7 @@ function DailyActivity({ activity }) {
             </div>
             <div className='chart-bottomInfos'>
                 <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                        data={sessions}
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 62,
-                        }}
-                    >
+                    <BarChart data={sessions} margin={{ top: 5, right: 30, left: 20, bottom: 62 }}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
                         <XAxis dataKey="name" tickLine={false} />
                         <YAxis orientation='right' tickLine={false} axisLine={false} ticks={[0, 300, 600]} />
@@ -47,8 +40,9 @@ function DailyActivity({ activity }) {
         </div>
     )
 }
+
 DailyActivity.propTypes = {
-    activity: PropTypes.object,
+    sessions: PropTypes.array,
 }
 
 export default DailyActivity

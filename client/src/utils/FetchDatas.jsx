@@ -12,12 +12,9 @@ respectively. */
 
 const MOCKED_DATA = false
 
-
 const FetchDatas = (url, id) => {
     const [userData, setUserData] = useState(null)
-
     useEffect(() => {
-
 
         if (MOCKED_DATA) {
             setUserData(dataBase.find((data) => { return data.id === parseInt(id) }))

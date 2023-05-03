@@ -14,12 +14,11 @@ import { CustomTooltip } from '../utils/CustomTooltip';
  * component also includes a tooltip and a customized cursor.
  */
 
-function SessionTiming({ session }) {
+function SessionTiming({ sessions }) {
 
-    const { sessions } = session.averageSessions || session.data
+
     const newSessionData = sessions.map((elmt) => {
         let newDay = 'D'
-
         if (elmt.day === 1) {
             newDay = 'L'
         }
@@ -57,7 +56,7 @@ function SessionTiming({ session }) {
 }
 
 SessionTiming.propTypes = {
-    session: PropTypes.object,
+    sessions: PropTypes.array,
 }
 
 export default SessionTiming

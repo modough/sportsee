@@ -3,37 +3,32 @@ import '../styles/performance.css'
 import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
-/* This is a React functional component called `Performance` that takes in a prop called `performance`.
-It maps the `data` property of the `performance` prop to a new array of objects with `kindTitle` and
-`value` properties. It then renders a `RadarChart` component from the `recharts` library using the
-new array of objects as data. The `kindTitle` property is used as the data key for the
-`PolarAngleAxis` component and the `value` property is used as the data key for the `Radar`
-component. The component also has a `propTypes` object that specifies that the `performance` prop
-should be an object. */
+/**
+* Displays a Radar Chart of performance data for various activities
+* @param {Object} props - The props object of the component.
+* @param {Array} props.performance - The performance data array consisting of objects with kind and value.
+* @returns {JSX.Element} - Returns the Radar Chart of performance data wrapped in a div element.
+*/
 
 function Performance({ performance }) {
-    const { data } = performance.performance || performance.data
-    const newPerformanceData = data.map((elmt) => {
-        let newKind = ''
+
+    const newPerformanceData = performance.map((elmt) => {
+        let newKind = 'Intensité'
         if (elmt.kind === 1) {
             newKind = 'Cardio'
         }
         else if (elmt.kind === 2) {
-            newKind = 'Energy'
+            newKind = 'Energie'
         }
         else if (elmt.kind === 3) {
             newKind = 'Endurance'
         }
         else if (elmt.kind === 4) {
-            newKind = 'Strength'
+            newKind = 'Force'
         }
         else if (elmt.kind === 5) {
-            newKind = 'Speed'
+            newKind = 'Vitesse'
         }
-        else {
-            newKind = 'Intensity'
-        }
-
         return { kindTitle: newKind, value: elmt.value }
     })
 
@@ -51,6 +46,6 @@ function Performance({ performance }) {
 }
 
 Performance.propTypes = {
-    performance: PropTypes.object
+    performance: PropTypes.array
 }
 export default Performance

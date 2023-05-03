@@ -3,14 +3,12 @@ import TopNavbar from './TopNavbar'
 import '../styles/App.css'
 import UserPage from '../pages/UserPage'
 
-
-
 /**
- * The function returns a JSX element that renders a top navigation bar and a user page within a
- * section element.
- * @returns The App component is being returned, which contains a section with an id of 'main' and two
- * child components: TopNavbar and UserPage.
+ * The main application component.
+ * @returns {JSX.Element} The rendered application.
  */
+
+
 function App() {
     return (
         <section id='main'>
