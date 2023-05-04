@@ -3,11 +3,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 100px;
+	gap: 100px;
 }
 #error-page h1 {
 	font-size: 200px;
 	font-weight: 700;
-	margin-bottom: 0;
+	margin: 0;
 	color: #ff0101;
 }
 
@@ -17,6 +19,12 @@
 }
 
 .homepage a {
-	color: #ff0101 !important;
-	text-decoration: none !important;
+	color: #ff0101;
+	text-decoration: none;
+}
+
+@media (width <= 1024px) {
+	#error-page {
+		gap: 0;
+	}
 }

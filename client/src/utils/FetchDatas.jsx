@@ -5,10 +5,14 @@ import { dataBase } from "../data/db";
 
 
 
-/* This code defines a custom React hook called `FetchDatas` that takes in two parameters: `url` and
-`id`. It uses the `useState` and `useEffect` hooks to manage state and perform side effects
-respectively. */
-
+/**
+ * A boolean constant indicating whether or not to use mocked data.
+ * @type {boolean}
+ * A custom hook that fetches user data from a given URL.
+ * @param {string} url - The URL to fetch the user data from.
+ * @param {number} id - The ID of the user to fetch data for.
+ * @returns {object|null} - The user data if the fetch is successful, or `null` if it fails.
+ */
 
 const MOCKED_DATA = false
 

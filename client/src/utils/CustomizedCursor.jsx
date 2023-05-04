@@ -4,11 +4,12 @@ import { Rectangle } from "recharts";
 
 
 /**
- * This is a React component that renders a customized cursor as a rectangle with a given width and
- * position.
- * @returns A React component that renders a Rectangle with a specified width, height, and x position,
- * and a fill color of 'rgba(0,0,0,0.2)'. The component takes two props: width (a number) and points (a
- * number).
+ * A React component that represents a customized cursor for a chart.
+ * @param {Object} props - The component props.
+ * @param {number} props.width - The width and height of the cursor.
+ * @param {Object[]} props.points - An array of objects that represents the coordinates of the cursor on the chart.
+ * @param {number} props.points[].x - The x coordinate of the cursor on the chart.
+ * @returns {JSX.Element} The component's UI representation.
  */
 
 export const CustomizedCursor = ({ width, points }) => {

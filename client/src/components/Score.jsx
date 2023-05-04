@@ -3,12 +3,13 @@ import '../styles/score.css';
 import PropTypes from 'prop-types'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 
-/* This is a React functional component called `Score` that takes in a prop called `score` and displays
-a radial bar chart representing the percentage of the user's score compared to their goal. The
-`score` prop is an object that contains data about the user's score, including their current score
-and their goal score. The component uses the `RadialBarChart` and `RadialBar` components from the
-`recharts` library to display the chart, and the `PropTypes` library to define the expected shape of
-the `score` prop. */
+
+/**
+* A component that displays the user's score and progress towards their goal as a radial bar chart.
+* @param {Object} props - The component props.
+* @param {number} props.score - The user's current score as a decimal value between 0 and 1.
+* @returns {JSX.Element} - The rendered component.
+*/
 
 function Score({ score }) {
     const scorePercent = score * 100

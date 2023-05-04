@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 import '../styles/customTooltip.css';
 
 /**
- * This is a custom tooltip component in JavaScript React that displays information based on the style
- * and payload provided.
- * @returns A React component called CustomTooltip is being returned. The component takes in three
- * props: active (a boolean), payload (an array), and style (a string). If active is true and payload
- * is not null or empty, the component returns either a div with class "custom-tooltip session" and a
- * paragraph with class "time" displaying the value of the first item in the payload array followed by
- * "
- */
+* A custom tooltip component for a chart
+* @function CustomTooltip
+* @param {Boolean} active - Determines if the tooltip is active
+* @param {Array} payload - Array of chart data
+* @param {String} style - The style of the tooltip
+* @returns {JSX.Element|null} A tooltip component or null if not active
+*/
 
 export const CustomTooltip = ({ active, payload, style }) => {
     if (active && payload && payload.length) {

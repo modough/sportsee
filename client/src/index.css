@@ -5,6 +5,6 @@
 	box-sizing: border-box;
 }
 body {
-	min-width: 1160px;
+	max-width: 1960px;
 	margin: 0;
 }

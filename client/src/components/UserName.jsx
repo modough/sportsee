@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import '../styles/userName.css'
 
 
+
 /**
- * This is a React component that displays a greeting message with the user's first name and a
+ * This is a React component that displays a greeting message and the user's first name, along with a
  * congratulatory message for achieving their goals.
- * @returns A React component called `UserName` is being returned. It takes in a prop called `data` and
- * renders a section with a div containing a greeting and the user's first name, and a paragraph with a
- * congratulatory message. The `data` prop is expected to be an object and is validated using
- * PropTypes.
+ * @param {string} firstName - The first name of the user.
+ * @returns A React component called `UserName` is being returned. It takes a prop called `firstName`
+ * and displays a greeting message with the first name and a congratulatory message. The component also
+ * has a prop type validation for `firstName`.
  */
 function UserName({ firstName }) {
 
