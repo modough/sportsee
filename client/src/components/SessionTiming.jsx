@@ -15,8 +15,6 @@ import { CustomTooltip } from '../utils/CustomTooltip';
  */
 
 function SessionTiming({ sessions }) {
-
-
     const newSessionData = sessions.map((elmt) => {
         let newDay = 'D'
         if (elmt.day === 1) {
@@ -46,9 +44,25 @@ function SessionTiming({ sessions }) {
             <p className='title'>Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="100%" margin="0">
                 <LineChart data={newSessionData} >
-                    <Line className="line" type="monotone" dot={false} dataKey="sessionLength" stroke="#ffff" strokeWidth={2} />
-                    <XAxis dataKey='dayInLetter' stroke="#ffff" axisLine={false} tickLine={false} />
-                    <Tooltip cursor={<CustomizedCursor />} content={<CustomTooltip style='session' />} />
+                    <Line
+                        className="line"
+                        type="monotone"
+                        dot={false}
+                        dataKey="sessionLength"
+                        stroke="#ffff"
+                        strokeWidth={2}
+                    />
+                    <XAxis
+                        dataKey='dayInLetter'
+                        stroke="#ffff"
+                        axisLine={false}
+                        tickLine={false}
+                    />
+                    <Tooltip
+                        cursor={<CustomizedCursor />}
+                        content={<CustomTooltip
+                            style='session' />}
+                    />
                 </LineChart>
             </ResponsiveContainer>
         </div>

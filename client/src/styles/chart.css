@@ -26,7 +26,7 @@
 	font-weight: 500;
 }
 
-@media (width <= 1274px) {
+@media (width <= 1620px) {
 	.chart {
 		flex-direction: column-reverse;
 	}

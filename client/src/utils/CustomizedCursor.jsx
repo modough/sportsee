@@ -18,7 +18,7 @@ export const CustomizedCursor = ({ width, points }) => {
             fill='rgba(0,0,0,0.2)'
             width={width}
             height={width}
-            x={points[0].x}
+            x={points[1].x}
         />
     );
 };

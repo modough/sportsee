@@ -19,10 +19,13 @@
 	margin-bottom: 5px;
 }
 
-@media (width <= 1274px) {
+@media (width <= 1620px) {
 	.biology {
 		flex-direction: row;
+		gap: 10px;
 	}
+}
+@media (width <= 1274px) {
 	.biology > div {
 		padding: 25px;
 	}
@@ -30,5 +33,11 @@
 @media (width <= 1024px) {
 	.biology > div {
 		padding: 15px;
+	}
+}
+@media (width <= 920px) {
+	.biology {
+		flex-direction: column;
+		gap: 10px;
 	}
 }

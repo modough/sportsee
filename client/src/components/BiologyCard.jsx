@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 
 function BiologyCard({ image, keyData, text }) {
     return (
-        <div className='calories'>
+        <div className='biology-infos'>
             <img src={image} alt="" />
             <span>
                 <p>{keyData}kCal</p>

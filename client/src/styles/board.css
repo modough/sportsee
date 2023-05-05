@@ -6,8 +6,8 @@
 	padding: 25px 75px;
 }
 
-@media (width <= 1024px) {
+@media (width <= 1050px) {
 	#board {
-		padding: 20px;
+		padding: 25px;
 	}
 }
