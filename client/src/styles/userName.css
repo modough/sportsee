@@ -20,3 +20,10 @@
 	font-weight: 400;
 	margin: 0;
 }
+
+@media (width <= 360px) {
+	.userInfos p,
+	.name {
+		font-size: 28px;
+	}
+}
